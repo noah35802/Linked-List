@@ -16,6 +16,12 @@ void print(struct Node *ptr)
     }
 }
 
+struct Node * insert_at_first(struct Node * head, int data){
+    struct Node * ptr = (struct Node *)malloc(sizeof(struct Node));
+    ptr -> next = head;
+    ptr ->  data = data;
+    return ptr;
+}
 int main()
 {
     struct Node *head = (struct Node *)malloc(sizeof(struct Node));
@@ -32,6 +38,9 @@ int main()
     third->next = NULL;
 
     print(head);
-
+    printf("\n");
+    head = insert_at_first(head, 0);
+    print(head);
+    
     return 0;
 }
