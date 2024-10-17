@@ -22,6 +22,7 @@ struct Node * insert_at_first(struct Node * head, int data){
     ptr ->  data = data;
     return ptr;
 }
+
 int main()
 {
     struct Node *head = (struct Node *)malloc(sizeof(struct Node));
